@@ -4,13 +4,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactNative, {
-  ListView,
   StyleSheet,
   View,
   NativeModules,
 } from 'react-native';
 import merge from 'merge';
-
+import { ListView } from 'deprecated-react-native-listview';
 import SectionHeader from './SectionHeader';
 import SectionList from './SectionList';
 import CellWrapper from './CellWrapper';
@@ -101,7 +100,7 @@ export default class SelectableSectionsListView extends Component {
     let y = 0;
     let headerHeight = this.props.headerHeight || 0;
     y += headerHeight;
-    
+
     if(this.props.contentInset) {
         y -= this.props.contentInset.top - headerHeight
     }
